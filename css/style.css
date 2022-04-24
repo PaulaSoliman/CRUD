@@ -1,0 +1,547 @@
+:root{
+  --maincolor:#20c997;
+  --mainbgcolor: #ececec;
+
+}
+*{
+  font-family: "Poppins", sans-serif;
+}
+/* Start Navbar */
+nav{
+  z-index: 1;
+}
+nav ul li a{
+  font-size: 18px;
+  transition: color 0.5s !important;
+}
+nav ul li:hover a{
+  color: var(--maincolor) !important;
+}
+@media screen and (max-width:990px) {
+    nav .small-navbar{
+      background-color: rgb(114, 114, 114);
+      text-align: center;
+    }
+    nav ul li a{
+      color: white !important;
+      border-bottom: solid 2px rgb(139, 139, 139) !important;
+      margin-bottom: 5px;
+      transition: color 0.5s;
+    }
+    nav ul li:hover a{
+      color: var(--maincolor) !important;
+      font-size: 20px !important;
+    }
+  }
+/* End Navbar */
+
+/* Start Home */
+#home{
+  background-image: url(../Image/images/intro-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+header .layer1{
+  background-color: rgba(0, 0, 0, 0.8)!important;
+  
+}
+header .container-content{
+  position: absolute;
+  top:30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header h1{
+  font-size: 65px;
+}
+@media screen and (max-width:990px) {
+  header h1{
+    font-size: 40px;
+    padding: 30px 0;
+    
+  }
+}
+header button{
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  color: var(--maincolor);
+  border: var(--maincolor) solid 2px;
+  border-radius: 50px;
+  transition: background-color 0.5s, color 0.5s;
+}
+header button:hover{
+  background-color: var(--maincolor);
+  color: white;
+  font-weight: bold;
+}
+header .arrow-motion a{
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white !important;
+  animation: move infinite 1.5s;
+}
+@keyframes move{
+  0%{
+    bottom: 5%;
+    opacity: 0.8;
+  }
+  100%{
+    bottom: 0%;
+    opacity: 0.5;
+    
+  }
+}
+/* End Home */
+
+/* Start Setting Icon */
+.setting-icon{
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background-color: #555;
+  color: white;
+  position: fixed;
+  top:30%;
+  right: 0;
+  z-index: 99;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+.setting-icon i{
+  transition: color 0.75s !important;
+}
+.setting-icon:hover i{
+  color: var(--maincolor);
+}
+@media screen and (max-width:990px) {
+  .setting-icon{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+/* End Setting Icon */
+
+/* Start About */
+#about .about-title{
+  font-size: 60px;
+  position: relative;
+}
+#about .about-title::before{
+  content: "ABOUT ME";
+  font-size: 100px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.08;
+}
+#about .about-title::after{
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: var(--maincolor);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+@media screen and (max-width:990px) {
+  #about .about-title::after{
+    top: 80%;
+  }
+  #about .about-title{
+    padding: 50px;
+  }
+  #about .about-title::before{
+    font-size: 60px;
+  }
+}
+
+#about .item{
+  padding-top: 15px;
+  border-bottom: solid rgba(187, 187, 187, 0.5) 1px;
+}
+#about .item a{
+  text-decoration: none;
+  color: var(--maincolor);
+}
+#about button{
+  width: 200px;
+  height: 50px;
+  background-color: var(--maincolor);
+  border: solid 2px var(--maincolor);
+  border-radius: 20px;
+  transition: background-color 0.5s;
+}
+#about button:hover{
+  background-color: transparent;
+}
+#about button:hover a{
+  color: var(--maincolor);
+}
+#about button a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+/* End About */
+
+/* Start Services */
+#whatido{
+  background-color: var(--mainbgcolor);
+}
+#whatido .what-title{
+  font-size: 60px;
+  position: relative;
+}
+#whatido .what-title::before{
+  content: "SERVICES";
+  font-size: 100px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.08;
+}
+#whatido .what-title::after{
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: var(--maincolor);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+@media screen and (max-width:990px) {
+
+  #whatido .what-title{
+    padding: 50px;
+  }
+}
+
+#whatido .service-content span{
+  border: solid white 2px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 20px;
+  color: var(--maincolor) !important;
+  font-size: 40px;
+  box-shadow: 0 0 2px rgb(163, 163, 163);
+}
+#whatido .service-content h3{
+  font-size: 20px;
+  font-weight: bold;
+}
+/* End Services */
+
+/* Start Resume */
+#resume .resume-title{
+  font-size: 60px;
+  position: relative;
+}
+#resume .resume-title::before{
+  content: "SUMMARY";
+  font-size: 100px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.08;
+}
+#resume .resume-title::after{
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: var(--maincolor);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+@media screen and (max-width:990px) {
+
+  #resume .resume-title{
+    padding: 60px;
+  }
+}
+#resume .item{
+  border: solid rgb(151, 151, 151) 1px;
+}
+#resume .item .bg-span{
+  background-color: var(--maincolor);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+/* End Resume */
+
+/* Start Resum2 */
+.resume-button button{
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  border: solid var(--maincolor) 2px;
+  border-radius: 20px;
+  transition: background-color 1s, border 1s;
+}
+.resume-button button a{
+  text-decoration: none;
+  color: var(--maincolor);
+}
+.resume-button button i{
+  color: var(--maincolor);
+}
+.resume-button button:hover a{
+  color: white ;
+}
+.resume-button button:hover i{
+  color: white ;
+}
+.resume-button button:hover{
+  background-color:#6c757d ;
+  border: #6c757d;
+}
+/* End Resum2 */
+
+/* Start Portfolio */
+#portfolio{
+  background-color: var(--mainbgcolor);
+}
+#portfolio .portfolio-title{
+  font-size: 60px;
+  position: relative;
+}
+#portfolio .portfolio-title::before{
+  content: "PORTFOLIO";
+  font-size: 100px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.08;
+}
+#portfolio .portfolio-title::after{
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: var(--maincolor);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+@media screen and (max-width:990px) {
+
+  #portfolio .portfolio-title{
+    padding: 60px;
+  }
+}
+#portfolio .portfolio-link a{
+ color: black;
+ transition: color 0.25s, border-bottom 0.25s;
+}
+#portfolio .portfolio-link .active{
+  color: var(--maincolor);
+  border-bottom: solid var(--maincolor) 2px;
+  padding: 15px 0;
+}
+#portfolio .portfolio-link li:hover a{
+  color: var(--maincolor);
+  border-bottom: solid var(--maincolor) 2px;
+  padding: 15px 0;
+}
+#portfolio .portfolio-image img{
+  width: 100%;
+  overflow: hidden;
+  transition: transform 1s, filter 1s;
+  
+}
+.portfolio-image .item{
+  overflow: hidden;
+  cursor: pointer;
+}
+.portfolio-image .item .layer2{
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+transition: opacity 0.5s;
+}
+.portfolio-image .item:hover .layer2{
+  opacity: 0.7;
+}
+.portfolio-image .item:hover img{
+  transform: scale(1.2);
+  filter: blur(5px);
+}
+/* End Portfolio */
+
+/* Start Testimonial */
+#client .client-title{
+  font-size: 60px;
+  position: relative;
+}
+#client .client-title::before{
+  content: "TESTIMONIAL";
+  font-size: 100px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.08;
+}
+#client .client-title::after{
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: var(--maincolor);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width:990px) {
+  #client .client-title{
+    padding: 60px;
+  }
+  }
+#client .carousel-indicators button{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+/* End Testimonial */
+
+/* Start Contact */
+#contact{
+  background-color: var(--mainbgcolor);
+}
+#contact h3{
+  font-size: 25px;
+  font-weight: bold;
+}
+#contact .contact-title{
+  font-size: 60px;
+  position: relative;
+}
+#contact .contact-title::before{
+  content: "CONTACT";
+  font-size: 100px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.08;
+}
+#contact .contact-title::after{
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: var(--maincolor);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width:990px) {
+  #contact .contact-title{
+    padding: 60px;
+  }
+  }
+#contact .follow-me-icon{
+  padding-top: 20px;
+}
+#contact .follow-me-icon a i{
+  font-size: 25px;
+  transition: color 1s;
+}
+#contact .follow-me-icon a:hover i{
+  color: #6c757d;
+}
+#contact textarea{
+  width: 100%;
+  height: 200px;
+}
+#contact button{
+  width: 200px;
+  height: 50px;
+  background-color: var(--maincolor);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  margin: 20px auto;
+  transition: color 1s, background-color 1s;
+}
+#contact button:hover{
+  background-color: #6c757d;
+  color: var(--maincolor);
+}
+/* End Contact */
+
+/* Start Footer */
+.footer-links a{
+  text-decoration: none;
+  padding: 15px;
+  color: black;
+  transition: color 0.5s;
+}
+.footer-links a:hover{
+  color: var(--maincolor);
+}
+.footer-links .footer-link1{
+  border-right: rgb(184, 184, 184) solid 2px;
+}
+@media screen and (max-width:990px) {
+ footer .footer{
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+ }
+ .footer-links .footer-link1{
+   border-right: none;
+   border-bottom: rgb(184, 184, 184) solid 2px;
+ }
+}
+/* End Footer */
+
+/* Start Fixed Homeback */
+.Homeback a{
+  text-decoration: none;
+  color: #6c757d;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  font-size: 45px;
+  transition: color 1s;
+}
+.Homeback a:hover{
+  color: var(--maincolor);
+}
+@media screen and (max-width:990px) {
+  .Homeback a{
+    font-size: 35px;
+  }
+}
+/*End Fixed Homeback */

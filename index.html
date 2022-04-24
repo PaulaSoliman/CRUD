@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/all.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class=" w-75 mx-auto mt-5">
+      <label for="productName" >Product Name</label>
+      <input type="text" id="productName" class="mb-2 form-control">
+      <label for="productPrice">Product Price</label>
+      <input type="text" id="productPrice" class="mb-2 form-control">
+      <label for="productCategory">Product Category</label>
+      <input type="text" id="productCategory" class="mb-2 form-control">
+      <label for="productDescription">Product Description</label>
+      <textarea id="productDescription" class="mb-2 form-control"></textarea>
+      <button class="btn btn-outline-info" id="addProduct" onclick="tableFilling ()">Add Product</button>
+    </div>
+    <div class=" w-50 mx-auto mt-5">
+      <input type="search"  id="searchInput" class="mb-2 form-control" onkeyup="search(this.value)" placeholder="Search......">
+    </div>
+    <div class="container mt-3">
+      <table class="table text-center">
+        <thead>
+            <th>Index</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Category</th>
+            <th>Product Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="tableContent">
+          <!-- <tr>
+            <td>0</td>
+            <td>nokia</td>
+            <td>5000</td>
+            <td>mobile</td>
+            <td>good</td>
+            <td><button class="btn btn-outline-warning">Update</button></td>
+            <td><button class="btn btn-outline-danger">Delete</button></td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  <script src="JS/main.js"></script>
+</body>
+</html>
